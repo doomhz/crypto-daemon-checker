@@ -7,8 +7,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "restify": "latest"
-    , "coffee-script": "latest"
+    "coffee-script": "latest"
     , "mysql": "latest"
     , "sequelize": "latest"
     , "lodash": "latest"
