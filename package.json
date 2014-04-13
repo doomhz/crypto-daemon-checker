@@ -1,0 +1,26 @@
+{
+  "name": "cryptodaemon_checker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node api",
+    "test": "make test"
+  },
+  "dependencies": {
+    "restify": "latest"
+    , "coffee-script": "latest"
+    , "mysql": "latest"
+    , "sequelize": "latest"
+    , "lodash": "latest"
+    , "github": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest"
+    , "should": "latest"
+    , "growl": "latest"
+    , "nodemock": "latest"
+    , "supertest": "latest"
+    , "grunt-contrib-coffee": "latest"
+    , "grunt-contrib-watch": "latest"
+  }
+}

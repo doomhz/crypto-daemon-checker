@@ -1,0 +1,32 @@
+{
+  "development" : {
+    "mysql": {
+      "db": "cryptodaemon_dev",
+      "user": "root",
+      "password": "",
+      "port": 3306,
+      "host": "localhost",
+      "logging": true
+    }
+  },
+  "test" : {
+    "mysql": {
+      "db": "cryptodaemon_test",
+      "user": "root",
+      "password": "",
+      "port": 3306,
+      "host": "localhost",
+      "logging": true
+    }
+  },
+  "production" : {
+    "mysql": {
+      "db": "cryptodaemon_production",
+      "user": "root",
+      "password": "",
+      "port": 3306,
+      "host": "localhost",
+      "logging": true
+    }
+  }
+}
