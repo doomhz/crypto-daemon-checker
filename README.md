@@ -38,3 +38,4 @@ TODO
 * Add SMS alerts through Twillio
 * Add HipChat alerts
 * Add Trello alerts/cards
+* Add SQLite storage for Sequelize
