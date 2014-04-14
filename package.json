@@ -1,5 +1,5 @@
 {
-  "name": "cryptodaemon_checker",
+  "name": "crypto_daemon_checker",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,6 +12,8 @@
     , "sequelize": "latest"
     , "lodash": "latest"
     , "github": "latest"
+    , "underscore": "latest"
+    , "nodemailer": "latest"
   },
   "devDependencies": {
     "mocha": "latest"

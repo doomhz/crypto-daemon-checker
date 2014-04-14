@@ -1,12 +1,48 @@
 {
   "development" : {
     "mysql": {
-      "db": "cryptodaemon_dev",
+      "db": "crypto_daemon_dev",
       "user": "root",
       "password": "",
       "port": 3306,
       "host": "localhost",
       "logging": true
+    },
+    "github": {
+      "version": "3.0.0",
+      "debug": false,
+      "protocol": "https",
+      "host": "api.github.com",
+      "timeout": 5000
+    },
+    "emailer": {
+      "enabled": true,
+      "from": "My Company <no-reply@mycompany.com>",
+      "to": "My Name <my_name@mycompany.com>",
+      "transport": {
+        "host": "email-smtp.us-east-1.amazonaws.com",
+        "port": 465,
+        "secureConnection": true,
+        "auth": {
+          "user": "",
+          "pass": ""
+        },
+        "debug": true
+      }
+    },
+    "daemons": {
+      "BTC": {
+        "user": "bitcoin",
+        "repo": "bitcoin"
+      },
+      "LTC": {
+        "user": "litecoin",
+        "repo": "litecoin-project"
+      },
+      "DOGE": {
+        "user": "dogecoin",
+        "repo": "dogecoin"
+      }
     }
   },
   "test" : {
@@ -17,6 +53,42 @@
       "port": 3306,
       "host": "localhost",
       "logging": true
+    },
+    "github": {
+      "version": "3.0.0",
+      "debug": false,
+      "protocol": "https",
+      "host": "api.github.com",
+      "timeout": 5000
+    },
+    "emailer": {
+      "enabled": false,
+      "from": "My Company <no-reply@mycompany.com>",
+      "to": "My Name <my_name@mycompany.com>",
+      "transport": {
+        "host": "email-smtp.us-east-1.amazonaws.com",
+        "port": 465,
+        "secureConnection": true,
+        "auth": {
+          "user": "",
+          "pass": ""
+        },
+        "debug": true
+      }
+    },
+    "daemons": {
+      "BTC": {
+        "user": "bitcoin",
+        "repo": "bitcoin"
+      },
+      "LTC": {
+        "user": "litecoin",
+        "repo": "litecoin-project"
+      },
+      "DOGE": {
+        "user": "dogecoin",
+        "repo": "dogecoin"
+      }
     }
   },
   "production" : {
@@ -26,7 +98,43 @@
       "password": "",
       "port": 3306,
       "host": "localhost",
-      "logging": true
+      "logging": false
+    },
+    "github": {
+      "version": "3.0.0",
+      "debug": false,
+      "protocol": "https",
+      "host": "api.github.com",
+      "timeout": 5000
+    },
+    "emailer": {
+      "enabled": true,
+      "from": "My Company <no-reply@mycompany.com>",
+      "to": "My Name <my_name@mycompany.com>",
+      "transport": {
+        "host": "email-smtp.us-east-1.amazonaws.com",
+        "port": 465,
+        "secureConnection": true,
+        "auth": {
+          "user": "",
+          "pass": ""
+        },
+        "debug": false
+      }
+    },
+    "daemons": {
+      "BTC": {
+        "user": "bitcoin",
+        "repo": "bitcoin"
+      },
+      "LTC": {
+        "user": "litecoin",
+        "repo": "litecoin-project"
+      },
+      "DOGE": {
+        "user": "dogecoin",
+        "repo": "dogecoin"
+      }
     }
   }
 }

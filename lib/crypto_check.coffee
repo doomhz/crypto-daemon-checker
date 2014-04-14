@@ -4,14 +4,8 @@ class CryptoCheck
 
   github: null
 
-  constructor: ()->
-    @github = new GitHubApi
-      version: "3.0.0"
-      debug: false
-      protocol: "https"
-      host: "api.github.com"
-      #pathPrefix: "/api/v3"
-      timeout: 5000
+  constructor: (options = {})->
+    @github = new GitHubApi options.github
 
   getReleases: (user, repo, callback = ()->)->
     @github.repos.getTags {repo: repo, user: user}, callback
