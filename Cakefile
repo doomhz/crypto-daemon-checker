@@ -11,3 +11,4 @@ task "db:create_tables", "Drop and create all tables", ()->
 task "deamons:fetch_last", "Fetch last deamon releases from GitHub", ()->
   for currency, daemonOptions of GLOBAL.appConfig().daemons
     GLOBAL.db.DaemonRelease.updateLast currency, daemonOptions.user, daemonOptions.repo
+  console.log new Date()
