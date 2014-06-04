@@ -4,15 +4,27 @@ class CryptoCheck
 
   github: null
 
+  token: null
+
   constructor: (options = {})->
     @github = new GitHubApi options.github
+    @token = options.github.token
+
+  auth: ()->
+    @github.authenticate
+      type: "oauth"
+      token: @token
 
   getReleases: (user, repo, callback = ()->)->
-    @github.repos.getTags {repo: repo, user: user}, callback
+    @auth()
+    @github.repos.getTags {user: repo, repo: user}, callback
 
   getLast: (user, repo, callback = ()->)->
-    @getReleases repo, user, (err, releases)->
+    @auth()
+    @getReleases repo, user, (err, releases = [])->
+      console.error repo, user, err  if err
       return callback err  if err
-      callback null, releases[0]
+      lastRelease = releases[0] or {}
+      callback null, lastRelease
 
 exports = module.exports = CryptoCheck

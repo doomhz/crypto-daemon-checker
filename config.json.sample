@@ -13,7 +13,8 @@
       "debug": false,
       "protocol": "https",
       "host": "api.github.com",
-      "timeout": 5000
+      "timeout": 5000,
+      "token": "auth_token"
     },
     "emailer": {
       "enabled": true,
